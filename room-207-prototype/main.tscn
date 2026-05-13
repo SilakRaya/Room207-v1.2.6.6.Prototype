@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bv7uk01qb30s2"]
 
-[ext_resource type="PackedScene" path="res://SilakRayaIntro.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://rk0glj2udx3d" path="res://SilakRayaIntro/SilakRayaIntro.tscn" id="1_ig7tw"]
 
 [node name="Main" type="Node2D" unique_id=432920584]
 

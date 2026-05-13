@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://rk0glj2udx3d"]
 
-[ext_resource type="Texture2D" uid="uid://bix07m6hwcm0u" path="res://textures/instance25.png" id="1_li5b9"]
+[ext_resource type="Texture2D" uid="uid://bix07m6hwcm0u" path="res://SilakRayaIntro/textures/instance25.png" id="1_li5b9"]
 [ext_resource type="Script" uid="uid://bw3dl1jrlpjpc" path="res://silak_raya_intro.gd" id="1_nv8fy"]
-[ext_resource type="Texture2D" uid="uid://bfjme4hlumbhi" path="res://textures/instance27.png" id="2_6z4ek"]
+[ext_resource type="Texture2D" uid="uid://bfjme4hlumbhi" path="res://SilakRayaIntro/textures/instance27.png" id="2_6z4ek"]
 
 [sub_resource type="Animation" id="Animation_6oi6i"]
 resource_name = "Intro"
@@ -137,13 +137,14 @@ _data = {
 script = ExtResource("1_nv8fy")
 
 [node name="Background" type="Node2D" parent="." unique_id=2049530591]
-position = Vector2(318, 175)
+position = Vector2(317, 175)
 scale = Vector2(0.4, 0.4)
 
 [node name="instance25" type="Sprite2D" parent="Background" unique_id=1588571813]
 texture = ExtResource("1_li5b9")
 
 [node name="instance26" type="Node2D" parent="." unique_id=942417460]
+z_index = 1
 position = Vector2(310, 180)
 scale = Vector2(0.56, 0.56)
 

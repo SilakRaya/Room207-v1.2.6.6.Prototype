@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d01gm7ogltyee"]
+
+[ext_resource type="PackedScene" uid="uid://ckr27j00wpab" path="res://JolinaIntroA1/JolinaIntroA1.tscn" id="1_e45do"]
+
+[node name="JolinaIntroA1Test" type="Node2D" unique_id=1492109372]
+
+[node name="JolinaIntroA1" parent="." unique_id=1303019345 instance=ExtResource("1_e45do")]
+position = Vector2(214, 180)

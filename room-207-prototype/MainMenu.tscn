@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cahe1tj8mpfib"]
 
-[ext_resource type="Texture2D" uid="uid://bix07m6hwcm0u" path="res://textures/instance25.png" id="1_h7a2f"]
+[ext_resource type="Texture2D" uid="uid://bix07m6hwcm0u" path="res://SilakRayaIntro/textures/instance25.png" id="1_h7a2f"]
 [ext_resource type="Script" uid="uid://ngrxqdrphrtb" path="res://main_menu.gd" id="1_iwfq2"]
-[ext_resource type="Texture2D" uid="uid://bfjme4hlumbhi" path="res://textures/instance27.png" id="2_qoqlk"]
+[ext_resource type="Texture2D" uid="uid://bfjme4hlumbhi" path="res://SilakRayaIntro/textures/instance27.png" id="2_qoqlk"]
 [ext_resource type="FontFile" uid="uid://4scieg81k82o" path="res://Fonts/fibre-font.otf" id="3_iwfq2"]
 [ext_resource type="Texture2D" uid="uid://d3aerqw7qcnrw" path="res://logo_large_monochrome_light.png" id="4_qoqlk"]
 
@@ -43,17 +43,22 @@ grow_horizontal = 2
 text = "ROOM207"
 label_settings = SubResource("LabelSettings_7r1g0")
 
-[node name="NewGame" type="Button" parent="Room207" unique_id=1358217977]
+[node name="GodotLogo" type="Sprite2D" parent="." unique_id=491018296]
+position = Vector2(1033.0001, 589.00006)
+scale = Vector2(0.0957031, 0.0957031)
+texture = ExtResource("4_qoqlk")
+
+[node name="NewGame" type="Button" parent="." unique_id=1358217977]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -117.0
-offset_top = 118.5
-offset_right = 126.0
-offset_bottom = 189.5
+offset_left = -121.5
+offset_top = -35.5
+offset_right = 121.5
+offset_bottom = 35.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -62,7 +67,7 @@ theme_override_font_sizes/font_size = 62
 text = "New GAME"
 flat = true
 
-[node name="Options" type="Button" parent="Room207/NewGame" unique_id=163192621]
+[node name="Options" type="Button" parent="." unique_id=163192621]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -81,7 +86,7 @@ theme_override_font_sizes/font_size = 62
 text = "OPTIONS"
 flat = true
 
-[node name="Credits" type="Button" parent="Room207/NewGame" unique_id=11112599]
+[node name="Credits" type="Button" parent="." unique_id=11112599]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -99,8 +104,3 @@ theme_override_fonts/font = ExtResource("3_iwfq2")
 theme_override_font_sizes/font_size = 62
 text = "Credits"
 flat = true
-
-[node name="GodotLogo" type="Sprite2D" parent="." unique_id=491018296]
-position = Vector2(1033.0001, 589.00006)
-scale = Vector2(0.0957031, 0.0957031)
-texture = ExtResource("4_qoqlk")
