@@ -35,7 +35,7 @@ Originally a rushed comic from senior high school, we're now reimagining it with
 > Inspired by games like *Until Then*, we want to create a story-driven experience that feels personal, atmospheric, and heartfelt.
 
 This repo documents the **polished vision** of the game.  
-> 📝 *For messy drafts, scrapped ideas, and raw storytelling notes, check out our [Wiki](https://github.com/SobrepenaKenneth/Room-207-Prototype/wiki) (coming soon).*
+> 📝 *For messy drafts, scrapped ideas, and raw storytelling notes, check out our [Wiki]([https://github.com/SobrepenaKenneth/Room-207-Prototype/wiki](https://github.com/SilakRaya/Room207-Prototype/wiki)) (coming soon).*
 
 <br>
 
