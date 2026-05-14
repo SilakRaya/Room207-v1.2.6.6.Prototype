@@ -5,5 +5,5 @@
 [node name="Main" type="Node2D" unique_id=432920584]
 
 [node name="SilakRayaIntro" parent="." unique_id=1875510279 instance=ExtResource("1_ig7tw")]
-position = Vector2(3.0000076, -7)
-scale = Vector2(1.8, 1.8)
+position = Vector2(5, 4)
+scale = Vector2(2, 2)

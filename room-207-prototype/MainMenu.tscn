@@ -16,12 +16,15 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -116.66675
+offset_bottom = -60.833374
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.1, 1.1)
 script = ExtResource("1_iwfq2")
 
 [node name="GoldBackground" type="Sprite2D" parent="." unique_id=347698177]
-position = Vector2(576.81055, 322.9375)
+position = Vector2(583.6363, 322.7273)
 scale = Vector2(0.71364564, 0.71442103)
 texture = ExtResource("1_h7a2f")
 
@@ -123,3 +126,5 @@ theme_override_fonts/font = ExtResource("3_iwfq2")
 theme_override_font_sizes/font_size = 62
 text = "Exit"
 flat = true
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

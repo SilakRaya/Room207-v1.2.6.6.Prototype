@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://y3anf0gv8w2c"]
 
 [ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="1_5any1"]
+[ext_resource type="Script" uid="uid://jqbqcyfpa6c4" path="res://Characters/jolina_a_1.gd" id="1_q44d3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7rlm"]
 size = Vector2(127, 270)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=235784097]
+[node name="Jolina" type="CharacterBody2D" unique_id=235784097]
+script = ExtResource("1_q44d3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=889206049]
 scale = Vector2(1, 2.1328125)

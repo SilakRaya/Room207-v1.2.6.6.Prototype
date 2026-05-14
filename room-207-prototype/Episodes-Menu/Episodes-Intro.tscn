@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dstugjs3dyu6q"]
+
+[ext_resource type="PackedScene" uid="uid://y3anf0gv8w2c" path="res://Characters/Jolina-A1.tscn" id="1_d7eik"]
+
+[node name="EpisodesIntro" type="Node2D" unique_id=595996593]
+
+[node name="CharacterBody2D" parent="." unique_id=235784097 instance=ExtResource("1_d7eik")]
+position = Vector2(641, 370)
