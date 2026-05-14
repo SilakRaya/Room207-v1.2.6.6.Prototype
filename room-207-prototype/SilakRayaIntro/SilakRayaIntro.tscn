@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://rk0glj2udx3d"]
 
 [ext_resource type="Texture2D" uid="uid://bix07m6hwcm0u" path="res://SilakRayaIntro/textures/instance25.png" id="1_li5b9"]
-[ext_resource type="Script" uid="uid://bw3dl1jrlpjpc" path="res://Main-Menu/silak_raya_intro.gd" id="1_nv8fy"]
+[ext_resource type="Script" uid="uid://bw3dl1jrlpjpc" path="res://Scripts/silak_raya_intro.gd" id="1_nv8fy"]
 [ext_resource type="Texture2D" uid="uid://bfjme4hlumbhi" path="res://SilakRayaIntro/textures/instance27.png" id="2_6z4ek"]
 
 [sub_resource type="Animation" id="Animation_6oi6i"]

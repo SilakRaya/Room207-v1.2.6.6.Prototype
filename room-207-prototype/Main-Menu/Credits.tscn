@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://do14pf2e55y3p"]
+
+[ext_resource type="Texture2D" uid="uid://bix07m6hwcm0u" path="res://SilakRayaIntro/textures/instance25.png" id="1_8xfna"]
+[ext_resource type="FontFile" uid="uid://4scieg81k82o" path="res://Fonts/fibre-font.otf" id="2_3gw5d"]
+[ext_resource type="Script" uid="uid://c08sghksh2358" path="res://Scripts/button.gd" id="3_r8ef3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r8ef3"]
+font = ExtResource("2_3gw5d")
+font_size = 140
+font_color = Color(0, 0, 0, 1)
+
+[node name="Credits" type="Node2D" unique_id=1002736092]
+
+[node name="Instance25" type="Sprite2D" parent="." unique_id=481965639]
+position = Vector2(627, 374)
+texture = ExtResource("1_8xfna")
+
+[node name="Label" type="Label" parent="." unique_id=779490801]
+offset_left = 295.0
+offset_top = 251.0
+offset_right = 1000.0
+offset_bottom = 391.0
+text = "Credits Menu"
+label_settings = SubResource("LabelSettings_r8ef3")
+
+[node name="Button" type="Button" parent="." unique_id=65368995]
+offset_left = 473.0
+offset_top = 397.0
+offset_right = 800.0
+offset_bottom = 507.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_3gw5d")
+theme_override_font_sizes/font_size = 101
+text = "GO BACK"
+flat = true
+script = ExtResource("3_r8ef3")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -29,9 +29,11 @@ func _on_new_game_pressed():
 	print("New Game button pressed")
 
 func _on_options_pressed():
+	get_tree().change_scene_to_file("res://Main-Menu/Options.tscn")
 	print("Options button pressed")
 
 func _on_credits_pressed():
+	get_tree().change_scene_to_file("res://Main-Menu/Credits.tscn")
 	print("Credits button pressed")
 
 func _on_exit_pressed() -> void:

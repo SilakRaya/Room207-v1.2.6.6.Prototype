@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://ys5w18j44e7e"]
+
+[ext_resource type="Texture2D" uid="uid://bix07m6hwcm0u" path="res://SilakRayaIntro/textures/instance25.png" id="1_k3lby"]
+[ext_resource type="FontFile" uid="uid://4scieg81k82o" path="res://Fonts/fibre-font.otf" id="2_cf3j2"]
+[ext_resource type="Script" uid="uid://c08sghksh2358" path="res://Scripts/button.gd" id="3_cf3j2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f2g1h"]
+font = ExtResource("2_cf3j2")
+font_size = 140
+font_color = Color(0, 0, 0, 1)
+
+[node name="Options" type="Node2D" unique_id=96492397]
+
+[node name="Instance25" type="Sprite2D" parent="." unique_id=1132475766]
+position = Vector2(627, 374)
+texture = ExtResource("1_k3lby")
+
+[node name="Label" type="Label" parent="." unique_id=2100705753]
+offset_left = 260.0
+offset_top = 245.0
+offset_right = 972.0
+offset_bottom = 385.0
+text = "Options Menu"
+label_settings = SubResource("LabelSettings_f2g1h")
+
+[node name="Button" type="Button" parent="." unique_id=788202050]
+offset_left = 464.0
+offset_top = 409.0
+offset_right = 791.0
+offset_bottom = 519.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_cf3j2")
+theme_override_font_sizes/font_size = 101
+text = "GO BACK"
+flat = true
+script = ExtResource("3_cf3j2")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
