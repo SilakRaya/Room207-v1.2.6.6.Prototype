@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://m5nv4ab5w0yn"]
+
+[ext_resource type="Texture2D" uid="uid://cxdnb1bqvoyi8" path="res://Main-Menu/Hand/textures/instance25.png" id="1_8xqho"]
+[ext_resource type="Texture2D" uid="uid://ttk0dfepyalm" path="res://Main-Menu/Hand/textures/instance26.png" id="2_cvyuk"]
+
+[sub_resource type="Animation" id="Animation_cf0ys"]
+resource_name = "Hand"
+length = 0.625
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("JolinaHand:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.04464286, 0.08928572, 0.13392857, 0.17857143, 0.22321428, 0.26785713, 0.3125, 0.35714287, 0.4017857, 0.44642857, 0.625),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(845, 612), Vector2(821, 632), Vector2(798, 655), Vector2(779, 679), Vector2(762, 707), Vector2(786, 670), Vector2(815, 638), Vector2(847, 611), Vector2(884, 589), Vector2(924, 571), Vector2(907, 578), Vector2(845, 612)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("JolinaHand:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.625),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("JolinaHand:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.08928572, 0.13392857, 0.17857143, 0.22321428, 0.3125, 0.35714287, 0.4017857, 0.44642857, 0.625),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.21412494628531764, -0.3196475334935083, -0.42893880916934624, -0.28038183810607364, 0.00896206027423574, 0.1535662906649855, 0.30200577059432687, 0.24057603810152184, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("JolinaHand:visible")
+tracks/3/interp = 0
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.625),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("JolinaHand:z_index")
+tracks/4/interp = 0
+tracks/4/loop_wrap = false
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.625),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eh0li"]
+_data = {
+&"Hand": SubResource("Animation_cf0ys")
+}
+
+[node name="Hand" type="Node2D" unique_id=1903416328]
+
+[node name="JolinaHand" type="Node2D" parent="." unique_id=197361391]
+position = Vector2(845, 612)
+
+[node name="Eraser" type="Node2D" parent="JolinaHand" unique_id=210418355]
+position = Vector2(72, 4)
+
+[node name="instance25" type="Sprite2D" parent="JolinaHand/Eraser" unique_id=1911097615]
+position = Vector2(-351, -267)
+texture = ExtResource("1_8xqho")
+
+[node name="handHold" type="Node2D" parent="JolinaHand" unique_id=1185701928]
+position = Vector2(67, -1)
+
+[node name="instance26" type="Sprite2D" parent="JolinaHand/handHold" unique_id=337437235]
+position = Vector2(-13, 64)
+texture = ExtResource("2_cvyuk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1241613672]
+libraries/ = SubResource("AnimationLibrary_eh0li")
+autoplay = &"Hand"

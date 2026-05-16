@@ -42,10 +42,19 @@ func _on_exit_pressed() -> void:
 
 
 func _on_marvin_pressed() -> void:
+	$AnimationPlayer.play("eraseTransition")
+	
+	# Wait for the animation_finished signal before moving to the next line
+	await $AnimationPlayer.animation_finished
+	
 	get_tree().change_scene_to_file("res://EpisodeOne/EpOneMarvin.tscn")
-	pass # Replace with function body.
+
 
 
 func _on_jolina_pressed() -> void:
+	$AnimationPlayer.play("eraseTransition")
+	
+	# Wait for the animation_finished signal before moving to the next line
+	await $AnimationPlayer.animation_finished
+	
 	get_tree().change_scene_to_file("res://EpisodeOne/EpOneJolina.tscn")
-	pass # Replace with function body.

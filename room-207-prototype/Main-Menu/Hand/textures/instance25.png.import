@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2owhhrie0w7j"
-path="res://.godot/imported/instance27.png-38ea8cdbb029c93ea716f0006ee5692a.ctex"
+uid="uid://cxdnb1bqvoyi8"
+path="res://.godot/imported/instance25.png-f71d84ae41df0bb50b498db3a0706fbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Episodes-Menu/Sunset/textures/instance27.png"
-dest_files=["res://.godot/imported/instance27.png-38ea8cdbb029c93ea716f0006ee5692a.ctex"]
+source_file="res://Main-Menu/Hand/textures/instance25.png"
+dest_files=["res://.godot/imported/instance25.png-f71d84ae41df0bb50b498db3a0706fbf.ctex"]
 
 [params]
 
