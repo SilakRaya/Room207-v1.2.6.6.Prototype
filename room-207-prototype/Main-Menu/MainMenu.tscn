@@ -462,6 +462,11 @@ _data = {
 &"eraseTransition": SubResource("Animation_x84d5")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_48x7w"]
+font = ExtResource("3_iwfq2")
+font_size = 47
+font_color = Color(0, 0, 0, 1)
+
 [node name="MainMenu" type="Control" unique_id=1406051104]
 layout_mode = 3
 anchors_preset = 15
@@ -492,7 +497,7 @@ anchor_right = 0.5
 offset_left = -332.0
 offset_top = 70.0
 offset_right = 323.00195
-offset_bottom = 270.00012
+offset_bottom = 270.0002
 grow_horizontal = 2
 text = "ROOM207"
 label_settings = SubResource("LabelSettings_7r1g0")
@@ -512,7 +517,7 @@ anchor_bottom = 0.5
 offset_left = -123.0
 offset_top = -68.0
 offset_right = 120.0
-offset_bottom = 3.0
+offset_bottom = 3.000061
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -530,7 +535,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -125.5
 offset_top = 21.5
-offset_right = 117.496704
+offset_right = 117.49658
 offset_bottom = 92.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -549,8 +554,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -128.0
 offset_top = 111.0
-offset_right = 114.99719
-offset_bottom = 182.00073
+offset_right = 114.99695
+offset_bottom = 182.0008
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -568,7 +573,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -123.5
 offset_top = 199.5
-offset_right = 119.49841
+offset_right = 119.49817
 offset_bottom = 270.50024
 grow_horizontal = 2
 grow_vertical = 2
@@ -605,8 +610,8 @@ texture = ExtResource("7_48x7w")
 layout_mode = 0
 offset_left = 372.72726
 offset_top = 1118.1818
-offset_right = 607.7274
-offset_bottom = 1204.1824
+offset_right = 607.7273
+offset_bottom = 1204.1826
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_iwfq2")
 theme_override_font_sizes/font_size = 77
@@ -617,8 +622,8 @@ flat = true
 layout_mode = 0
 offset_left = 450.9091
 offset_top = 1161.8181
-offset_right = 777.90906
-offset_bottom = 1271.8181
+offset_right = 777.9092
+offset_bottom = 1271.8184
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_iwfq2")
 theme_override_font_sizes/font_size = 101
@@ -710,6 +715,13 @@ theme_override_fonts/font = ExtResource("3_iwfq2")
 theme_override_font_sizes/font_size = 150
 text = "EPISODE 5"
 flat = true
+
+[node name="Label" type="Label" parent="." unique_id=1786094486]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "VER: 1.0.0"
+label_settings = SubResource("LabelSettings_48x7w")
 
 [node name="Hand" parent="." unique_id=1138066097 instance=ExtResource("9_48x7w")]
 position = Vector2(964.5454, 519.0909)
