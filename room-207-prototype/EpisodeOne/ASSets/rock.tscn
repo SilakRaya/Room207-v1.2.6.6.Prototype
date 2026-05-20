@@ -1,12 +1,10 @@
 [gd_scene format=3 uid="uid://c8nj7rdi3fdjp"]
 
 [ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="1_l3tv6"]
-[ext_resource type="Script" uid="uid://cvr81dbaxal24" path="res://EpisodeOne/ASSets/rock.gd" id="1_s4a72"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s4a72"]
 
 [node name="Rock" type="Node3D" unique_id=93286859]
-script = ExtResource("1_s4a72")
 
 [node name="Rock1" type="StaticBody3D" parent="." unique_id=428436189]
 
