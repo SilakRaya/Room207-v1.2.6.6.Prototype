@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c8nj7rdi3fdjp"]
+
+[ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="1_l3tv6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s4a72"]
+
+[node name="Rock" type="Node3D" unique_id=93286859]
+
+[node name="Rock1" type="StaticBody3D" parent="." unique_id=1499187448]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rock1" unique_id=834201387]
+shape = SubResource("BoxShape3D_s4a72")
+
+[node name="Sprite3D" type="Sprite3D" parent="Rock1" unique_id=673982061]
+texture = ExtResource("1_l3tv6")
+
+[node name="Rock2" type="StaticBody3D" parent="." unique_id=590286991]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7126026, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rock2" unique_id=686938850]
+shape = SubResource("BoxShape3D_s4a72")
+
+[node name="Sprite3D" type="Sprite3D" parent="Rock2" unique_id=1057547699]
+texture = ExtResource("1_l3tv6")
