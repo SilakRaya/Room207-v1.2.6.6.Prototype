@@ -1,5 +1,7 @@
 extends Control
 
+var episodeSelected : String = ""
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimationPlayer.play("Intro")
@@ -32,8 +34,9 @@ func _on_back_pressed() -> void:
 # Episode One
 # call the EpisodeTitle & EpisodeDesc
 func _on_episode_one_pressed() -> void:
+	episodeSelected = "EpisodeOne"
 	%EpisodeTitle.text = "All I Feel And See"
-	%EpisodeDesc.text = "Explore and identify the mystery of Room 207"
+	%EpisodeTDesc.text = "Explore and identify the mystery of Room 207"
 
 # Exit button
 func _on_exit_pressed() -> void:
@@ -53,3 +56,8 @@ func _on_back_2_pressed() -> void:
 	%EpisodeSelection.visible = false
 	$MainMenuContainer.visible = true
 	%Back2.visible = false
+
+
+func _on_play_pressed() -> void:
+	print("Episode Selected: ", episodeSelected)
+	get_tree().change_scene_to_file("res://EpisodeOne/Acts/ActOne.tscn")

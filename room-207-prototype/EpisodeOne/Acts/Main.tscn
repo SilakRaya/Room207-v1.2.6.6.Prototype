@@ -24,6 +24,12 @@ font_size = 70
 outline_size = 30
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_sco8o"]
+font = ExtResource("4_mlio8")
+font_size = 20
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_qbql7"]
 paragraph_spacing = 50.0
 font = ExtResource("4_mlio8")
@@ -70,6 +76,33 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_qbql7"]
+resource_name = "EpisodeSelection"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenuContainer:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EpisodeSelection:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_a4jnn"]
@@ -202,6 +235,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("EpisodeSelection:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_ofxwg"]
@@ -338,10 +383,23 @@ tracks/10/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("EpisodeSelection:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ekh7m"]
 _data = {
 &"Credits": SubResource("Animation_sco8o"),
+&"EpisodeSelection": SubResource("Animation_qbql7"),
 &"Intro": SubResource("Animation_a4jnn"),
 &"LabelOutlineEffect": SubResource("Animation_givfi"),
 &"MainMenu": SubResource("Animation_llmym"),
@@ -602,12 +660,29 @@ texture = ExtResource("5_ayxap")
 [node name="VBoxContainer" type="VBoxContainer" parent="EpisodeSelection/PanelContainer" unique_id=795193266]
 layout_mode = 2
 
+[node name="Play" type="Button" parent="EpisodeSelection/PanelContainer/VBoxContainer" unique_id=1090882998]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("4_mlio8")
+theme_override_font_sizes/font_size = 70
+text = "Play"
+flat = true
+
 [node name="EpisodeTitle" type="Label" parent="EpisodeSelection/PanelContainer/VBoxContainer" unique_id=498873010]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Episode Title here!"
 label_settings = SubResource("LabelSettings_givfi")
+
+[node name="EpisodeTDesc" type="Label" parent="EpisodeSelection/PanelContainer/VBoxContainer" unique_id=806273990]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Episode Title here!"
+label_settings = SubResource("LabelSettings_sco8o")
 
 [node name="Credits" type="CenterContainer" parent="." unique_id=1871612162]
 layout_mode = 1
@@ -616,6 +691,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 1000.0
 offset_bottom = 1311.0
+grow_horizontal = 2
+grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Credits" unique_id=132206806]
@@ -665,14 +742,51 @@ autoplay = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1091699425]
 libraries/ = SubResource("AnimationLibrary_ekh7m")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1089140089]
+layout_mode = 0
+offset_top = 720.0
+offset_right = 1280.0
+offset_bottom = 1704.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=825715352]
+layout_mode = 0
+offset_top = -984.0
+offset_right = 1280.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=977900916]
+layout_mode = 0
+offset_left = 1280.0
+offset_top = -984.0
+offset_right = 2560.0
+offset_bottom = 1704.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=969485311]
+layout_mode = 0
+offset_left = -1280.0
+offset_top = -984.0
+offset_bottom = 1704.0
+color = Color(0, 0, 0, 1)
+
 [node name="devNote" type="Label" parent="." unique_id=2030213607]
 layout_mode = 0
 offset_left = 20.0
 offset_top = 777.0
-offset_right = 1891.0
+offset_right = 2028.0
 offset_bottom = 856.0
 theme_override_font_sizes/font_size = 58
 text = "You can switch between animation, just click the Animation Player! -ken"
+
+[node name="devNote2" type="Label" parent="." unique_id=1004350734]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 896.0
+offset_right = 2040.0
+offset_bottom = 975.0
+theme_override_font_sizes/font_size = 58
+text = "Ignore the black thing lol, it's just to cover stuff"
 
 [connection signal="pressed" from="IntroContainer/SkipButton" to="." method="_on_skip_button_pressed"]
 [connection signal="pressed" from="MainMenuContainer/FlowContainer/VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
@@ -680,6 +794,7 @@ text = "You can switch between animation, just click the Animation Player! -ken"
 [connection signal="pressed" from="MainMenuContainer/FlowContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="EpisodeSelection/Episodes/VBoxContainer/EpisodeOne" to="." method="_on_episode_one_pressed"]
 [connection signal="pressed" from="EpisodeSelection/Episodes/VBoxContainer/Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="Back2" to="." method="_on_back_2_pressed"]
+[connection signal="pressed" from="EpisodeSelection/PanelContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Back2" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Back2" to="." method="_on_back_2_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
