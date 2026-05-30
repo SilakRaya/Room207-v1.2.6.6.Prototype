@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dt2xykj4k2h6m"]
 
-[ext_resource type="Script" uid="uid://b0535vjnbjm3s" path="res://Ep1-TheInBituin/Characters/jolina.gd" id="1_w0kse"]
+[ext_resource type="Script" uid="uid://b0535vjnbjm3s" path="res://Ep1/Characters/jolina.gd" id="1_w0kse"]
 [ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="2_fhl5q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3c18"]

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cjtt2oosf50k4"]
 
 [ext_resource type="AudioStream" uid="uid://bodrcxpl4fo1a" path="res://Ost/Room207-Vivid.wav" id="1_jpnmx"]
-[ext_resource type="Script" uid="uid://oyfspcne8ya8" path="res://Ep1-TheInBituin/Scenes/scene_a_2.gd" id="1_oevfs"]
-[ext_resource type="PackedScene" uid="uid://b4t83ss3mw30s" path="res://Ep1-TheInBituin/GUI/Dialogue.tscn" id="3_jt7db"]
-[ext_resource type="PackedScene" uid="uid://dt2xykj4k2h6m" path="res://Ep1-TheInBituin/Characters/Jolina.tscn" id="4_qw24q"]
+[ext_resource type="Script" uid="uid://oyfspcne8ya8" path="res://Ep1/Scenes/scene_a_2.gd" id="1_oevfs"]
+[ext_resource type="PackedScene" uid="uid://b4t83ss3mw30s" path="res://Ep1/GUI/Dialogue.tscn" id="3_jt7db"]
+[ext_resource type="PackedScene" uid="uid://dt2xykj4k2h6m" path="res://Ep1/Characters/Jolina.tscn" id="4_qw24q"]
 [ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="5_htubx"]
 
 [sub_resource type="Animation" id="Animation_jpnmx"]
@@ -95,6 +95,7 @@ autoplay = true
 playback_type = 1
 
 [node name="audio" type="AnimationPlayer" parent="." unique_id=892016199]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_oevfs")
 
 [node name="Dialogue" parent="." unique_id=522377500 instance=ExtResource("3_jt7db")]
@@ -124,6 +125,7 @@ position = Vector2(-152, 696)
 texture = ExtResource("5_htubx")
 
 [node name="camera_zoom_out" type="AnimationPlayer" parent="." unique_id=692234213]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_oevfs")
 
 [node name="Label" type="Label" parent="." unique_id=1285274590]

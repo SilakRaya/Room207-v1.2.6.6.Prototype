@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c81dqxr4pmws1"]
 
-[ext_resource type="Script" uid="uid://dw5pxi387t650" path="res://Ep1-TheInBituin/Scenes/scene_a_1.gd" id="1_k4r4u"]
+[ext_resource type="Script" uid="uid://dw5pxi387t650" path="res://Ep1/Scenes/scene_a_1.gd" id="1_k4r4u"]
 [ext_resource type="AudioStream" uid="uid://bdrcxo2t1k70l" path="res://Ost/Room207-If-I-Lose-Myself.wav" id="1_qvm7g"]
 [ext_resource type="Texture2D" uid="uid://c3n5m11bflx1" path="res://SilakRaya-White.png" id="2_i7jle"]
 [ext_resource type="FontFile" uid="uid://4scieg81k82o" path="res://Fonts/fibre-font.otf" id="4_y0ahj"]

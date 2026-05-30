@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b1trcnyiophq4"]
 
-[ext_resource type="Script" uid="uid://dgbgh1uod61f2" path="res://Ep1-TheInBituin/Scenes/Main.gd" id="1_qbql7"]
-[ext_resource type="Texture2D" uid="uid://by8g0eys7wt8k" path="res://Ep1-TheInBituin/Acosta/Jolina's Background.jpg" id="2_sco8o"]
+[ext_resource type="Script" uid="uid://dgbgh1uod61f2" path="res://Ep1/Scenes/Main.gd" id="1_qbql7"]
+[ext_resource type="Texture2D" uid="uid://by8g0eys7wt8k" path="res://Ep1/Acosta/Jolina's Background.jpg" id="2_sco8o"]
 [ext_resource type="LabelSettings" uid="uid://csdk74vtk1r2x" path="res://Fonts/new_label_settings.tres" id="3_8hw34"]
 [ext_resource type="FontFile" uid="uid://4scieg81k82o" path="res://Fonts/fibre-font.otf" id="4_mlio8"]
 [ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="5_ayxap"]

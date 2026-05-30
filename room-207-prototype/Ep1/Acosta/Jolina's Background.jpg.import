@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://by8g0eys7wt8k"
-path="res://.godot/imported/Jolina's Background.jpg-334ddfdffa6f03a10fd8ac617c598d2c.ctex"
+path="res://.godot/imported/Jolina's Background.jpg-5d9fd2ce7784b3c25ca543ffac2901c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ep1-TheInBituin/Acosta/Jolina's Background.jpg"
-dest_files=["res://.godot/imported/Jolina's Background.jpg-334ddfdffa6f03a10fd8ac617c598d2c.ctex"]
+source_file="res://Ep1/Acosta/Jolina's Background.jpg"
+dest_files=["res://.godot/imported/Jolina's Background.jpg-5d9fd2ce7784b3c25ca543ffac2901c1.ctex"]
 
 [params]
 

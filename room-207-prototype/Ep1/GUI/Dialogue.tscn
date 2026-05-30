@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4t83ss3mw30s"]
 
-[ext_resource type="Script" uid="uid://cltu8ypia2bay" path="res://Ep1-TheInBituin/GUI/dialogue.gd" id="1_5hxbv"]
+[ext_resource type="Script" uid="uid://cltu8ypia2bay" path="res://Ep1/GUI/dialogue.gd" id="1_5hxbv"]
 [ext_resource type="FontFile" uid="uid://4scieg81k82o" path="res://Fonts/fibre-font.otf" id="2_f84lu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j7x0m"]

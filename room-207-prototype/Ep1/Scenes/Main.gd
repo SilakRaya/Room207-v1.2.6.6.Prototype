@@ -54,7 +54,7 @@ func _on_play_pressed() -> void:
 	print("Episode Selected: ", episodeSelected)
 	match episodeSelected:
 		"EpisodeOne":
-			get_tree().change_scene_to_file("res://Ep1-TheInBituin/Scenes/SceneA1.tscn")
+			get_tree().change_scene_to_file("res://Ep1/Scenes/SceneA1.tscn")
 		"EpisodeTwo":
 			%EpisodeSelection.visible = false
 			$ComingSoon.visible = true

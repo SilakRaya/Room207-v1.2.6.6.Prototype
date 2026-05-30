@@ -35,7 +35,7 @@ project/assembly_name="Room207-Prototype"
 
 folder_colors={
 "res://Blender/": "orange",
-"res://Ep1-TheInBituin/": "yellow",
+"res://Ep1/": "yellow",
 "res://Fonts/": "green",
 "res://Ost/": "pink"
 }
