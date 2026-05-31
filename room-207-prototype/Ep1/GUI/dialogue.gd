@@ -2,7 +2,7 @@ extends Control
 
 # Encapsulation
 # Enter dialogue here! through properties
-@export var _Jolina_Lines:Array[String] = []
+@export var _Jolina_Lines:Array[String] = ["DUMMY"]
 @export var repeat:bool = false
 @export var _typing_speed:float = 0.1
 

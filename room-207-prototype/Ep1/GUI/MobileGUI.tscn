@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ddqpjauuwfref" path="res://Ep1/GUI/mobile_gui.gd" id="1_uwoms"]
 
 [node name="MobileGui" type="Control" unique_id=465481812]
+modulate = Color(1, 1, 1, 0.3882353)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

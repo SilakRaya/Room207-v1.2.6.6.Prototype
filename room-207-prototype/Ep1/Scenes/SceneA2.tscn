@@ -1,144 +1,207 @@
 [gd_scene format=3 uid="uid://cjtt2oosf50k4"]
 
-[ext_resource type="AudioStream" uid="uid://bodrcxpl4fo1a" path="res://Ost/Room207-Vivid.wav" id="1_jpnmx"]
 [ext_resource type="Script" uid="uid://oyfspcne8ya8" path="res://Ep1/Scenes/scene_a_2.gd" id="1_oevfs"]
+[ext_resource type="AudioStream" uid="uid://cklddr5fp7uqh" path="res://Ost/86304_newgrounds_eerie_.mp3" id="2_lhwjw"]
 [ext_resource type="PackedScene" uid="uid://b4t83ss3mw30s" path="res://Ep1/GUI/Dialogue.tscn" id="3_jt7db"]
 [ext_resource type="PackedScene" uid="uid://dt2xykj4k2h6m" path="res://Ep1/Characters/Jolina.tscn" id="4_qw24q"]
 [ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="5_htubx"]
-[ext_resource type="PackedScene" uid="uid://bldaeyhmw4g4c" path="res://Ep1/GUI/MobileGUI.tscn" id="5_y5w6v"]
 
-[sub_resource type="Animation" id="Animation_jpnmx"]
-resource_name = "Firefly"
-length = 101.5536
-tracks/0/type = "audio"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AudioStreamPlayer2D")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 1.6392071,
-"stream": ExtResource("1_jpnmx")
-}],
-"times": PackedFloat32Array(0.03333333)
-}
-tracks/0/use_blend = true
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AudioStreamPlayer2D:autoplay")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhwjw"]
+size = Vector2(127, 128)
 
-[sub_resource type="Animation" id="Animation_oevfs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AudioStreamPlayer2D:autoplay")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera2D:zoom")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.87, 0.87)]
-}
-
-[sub_resource type="Animation" id="Animation_qw24q"]
-resource_name = "camera_zoom_out"
-length = 50.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:zoom")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 49.966667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.87, 0.87), Vector2(0.7, 0.7)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_oevfs"]
-_data = {
-&"Firefly": SubResource("Animation_jpnmx"),
-&"RESET": SubResource("Animation_oevfs"),
-&"camera_zoom_out": SubResource("Animation_qw24q")
-}
+[sub_resource type="LabelSettings" id="LabelSettings_lhwjw"]
+font_size = 63
 
 [node name="SceneA2" type="Node2D" unique_id=1612319344]
 script = ExtResource("1_oevfs")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1824647487]
+position = Vector2(6198, 486)
+stream = ExtResource("2_lhwjw")
 autoplay = true
+max_distance = 4096.0
 playback_type = 1
-
-[node name="audio" type="AnimationPlayer" parent="." unique_id=892016199]
-unique_name_in_owner = true
-libraries/ = SubResource("AnimationLibrary_oevfs")
-
-[node name="Dialogue" parent="." unique_id=522377500 instance=ExtResource("3_jt7db")]
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 640.0
-offset_top = 152.0
-offset_right = 640.0
-offset_bottom = 152.0
-grow_horizontal = 1
-grow_vertical = 1
-_Jolina_Lines = Array[String](["...", "Where am I?", "Oh-", "I-", "I had the same dream again-", "This is just the demo!", "Stay Tuned!"])
-metadata/_edit_use_anchors_ = true
-
-[node name="Jolina" parent="." unique_id=810497922 instance=ExtResource("4_qw24q")]
-position = Vector2(640, 358)
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=797853511]
-position = Vector2(640, 288)
-zoom = Vector2(0.87, 0.87)
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=1082562953]
-position = Vector2(-152, 696)
-texture = ExtResource("5_htubx")
-
-[node name="camera_zoom_out" type="AnimationPlayer" parent="." unique_id=692234213]
-unique_name_in_owner = true
-libraries/ = SubResource("AnimationLibrary_oevfs")
-
-[node name="Label" type="Label" parent="." unique_id=1285274590]
-offset_left = -320.0
-offset_top = 560.0
-offset_right = 67.0
-offset_bottom = 609.0
-text = "don't mind me im just a dummy test if the camera
-is really zooming out"
-horizontal_alignment = 1
-vertical_alignment = 1
+parameters/looping = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=421710373]
 
-[node name="MobileGui" parent="CanvasLayer" unique_id=465481812 instance=ExtResource("5_y5w6v")]
+[node name="201" type="Node2D" parent="." unique_id=1814370202]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.31500003)
+position = Vector2(2232, 486)
+scale = Vector2(1.9324505, 2.848267)
+
+[node name="Icon2" type="Sprite2D" parent="201" unique_id=326428522]
+texture = ExtResource("5_htubx")
+
+[node name="Icon" type="Sprite2D" parent="201" unique_id=1794420440]
+position = Vector2(-456.41528, 0)
+texture = ExtResource("5_htubx")
+
+[node name="Label" type="Label" parent="201" unique_id=69611706]
+offset_left = -498.8485
+offset_top = -90.2303
+offset_right = -421.8485
+offset_bottom = -67.2303
+text = "Room 201"
+
+[node name="Label2" type="Label" parent="201" unique_id=1326714772]
+offset_left = -36.740936
+offset_top = -90.2303
+offset_right = 40.259064
+offset_bottom = -67.2303
+text = "Room 201"
+
+[node name="203" type="Node2D" parent="." unique_id=390054680]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.31500003)
+position = Vector2(3853.0002, 486)
+scale = Vector2(1.9324505, 2.848267)
+
+[node name="Icon2" type="Sprite2D" parent="203" unique_id=1180688455]
+texture = ExtResource("5_htubx")
+
+[node name="Icon" type="Sprite2D" parent="203" unique_id=310016071]
+position = Vector2(-456.41528, 0)
+texture = ExtResource("5_htubx")
+
+[node name="Label" type="Label" parent="203" unique_id=1596623490]
+offset_left = -498.8485
+offset_top = -90.2303
+offset_right = -421.8485
+offset_bottom = -67.2303
+text = "Room 203"
+
+[node name="Label2" type="Label" parent="203" unique_id=1974000799]
+offset_left = -36.740936
+offset_top = -90.2303
+offset_right = 40.259064
+offset_bottom = -67.2303
+text = "Room 203"
+
+[node name="205" type="Node2D" parent="." unique_id=1418272201]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.31500003)
+position = Vector2(5465, 486)
+scale = Vector2(1.9324505, 2.848267)
+
+[node name="Icon2" type="Sprite2D" parent="205" unique_id=1217929409]
+texture = ExtResource("5_htubx")
+
+[node name="Icon" type="Sprite2D" parent="205" unique_id=1173589929]
+position = Vector2(-456.41528, 0)
+texture = ExtResource("5_htubx")
+
+[node name="Label" type="Label" parent="205" unique_id=423525158]
+offset_left = -498.8485
+offset_top = -90.2303
+offset_right = -421.8485
+offset_bottom = -67.2303
+text = "Room 205"
+
+[node name="Label2" type="Label" parent="205" unique_id=98906931]
+offset_left = -36.740936
+offset_top = -90.2303
+offset_right = 40.259064
+offset_bottom = -67.2303
+text = "Room 205"
+
+[node name="207" type="Node2D" parent="." unique_id=1337596930]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.31500003)
+position = Vector2(7067.0005, 486)
+scale = Vector2(1.9324505, 2.848267)
+
+[node name="Icon2" type="Sprite2D" parent="207" unique_id=657257355]
+texture = ExtResource("5_htubx")
+
+[node name="Icon" type="Sprite2D" parent="207" unique_id=1287861016]
+modulate = Color(1, 0.24269372, 0.62863654, 1)
+position = Vector2(-456.41528, 0)
+texture = ExtResource("5_htubx")
+
+[node name="Label" type="Label" parent="207" unique_id=1614597321]
+offset_left = -498.8485
+offset_top = -90.2303
+offset_right = -421.8485
+offset_bottom = -67.2303
+text = "Room 207"
+
+[node name="Label2" type="Label" parent="207" unique_id=1749843400]
+offset_left = -36.740936
+offset_top = -90.2303
+offset_right = 40.259064
+offset_bottom = -67.2303
+text = "Room 207"
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1181132052]
+modulate = Color(0.03501795, 0.24763227, 0.3095626, 0.3529412)
+position = Vector2(290.03076, 390)
+scale = Vector2(11.108896, 5.603248)
+texture = ExtResource("5_htubx")
+
+[node name="Jolina" parent="." unique_id=810497922 instance=ExtResource("4_qw24q")]
+position = Vector2(582, 534)
+
+[node name="Control" type="Control" parent="Jolina" unique_id=1212885880]
+layout_mode = 3
+anchor_left = -0.33125
+anchor_top = -0.42222223
+anchor_right = 0.33671874
+anchor_bottom = -0.31111112
+offset_top = -257.0
+offset_bottom = -257.0
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Dialogue" parent="Jolina/Control" unique_id=704191399 instance=ExtResource("3_jt7db")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -299.0
+offset_top = -30.0
+offset_right = 300.0
+offset_bottom = 30.0
+_Jolina_Lines = Array[String](["...", "....", "Where-", "Where am I?", "...", "....", "This isn't-", "My-", "Classroom-", "...", "....", "Oh-", "I", "I had the same dream again", "....", "...", "!!!", "A Firefly?", "Huh!", "Hey!", "Wait Up!", "..."])
+
+[node name="Camera2D" type="Camera2D" parent="Jolina" unique_id=827490742]
+position = Vector2(0, -48)
+offset = Vector2(0, -200)
+zoom = Vector2(0.51, 0.51)
+
+[node name="GroundFloor" type="StaticBody2D" parent="." unique_id=289083114]
+unique_name_in_owner = true
+position = Vector2(5465, 845)
+scale = Vector2(104.98642, -2.9432998)
+
+[node name="Icon" type="Sprite2D" parent="GroundFloor" unique_id=1632451165]
+modulate = Color(0.495847, 0.29349047, 0, 1)
+texture = ExtResource("5_htubx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundFloor" unique_id=400016844]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_lhwjw")
+
+[node name="GroundFloor2" type="StaticBody2D" parent="." unique_id=571105503]
+unique_name_in_owner = true
+position = Vector2(-1547, -128.99998)
+scale = Vector2(4.7005324, 18.180653)
+
+[node name="Icon" type="Sprite2D" parent="GroundFloor2" unique_id=1807216145]
+modulate = Color(0.495847, 0.29349047, 0, 1)
+texture = ExtResource("5_htubx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GroundFloor2" unique_id=1581707067]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_lhwjw")
+
+[node name="Label" type="Label" parent="." unique_id=4183968]
+offset_left = -361.0
+offset_top = 96.0
+offset_right = 184.0
+offset_bottom = 183.0
+text = "Stairs to 2nd floor"
+label_settings = SubResource("LabelSettings_lhwjw")

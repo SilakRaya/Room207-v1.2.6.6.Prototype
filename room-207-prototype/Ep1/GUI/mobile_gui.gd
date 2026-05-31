@@ -13,10 +13,8 @@ func _on_continue_pressed() -> void:
 
 
 func _on_left_movement_pressed() -> void:
-	Input.action_press("left")
-	Input.action_release("left")
+	Input.action_press("move_left")
 
 
 func _on_right_movement_pressed() -> void:
-	Input.action_press("right")
-	Input.action_release("right")
+	Input.action_press("move_right")
