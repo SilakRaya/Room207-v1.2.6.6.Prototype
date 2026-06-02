@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://oyfspcne8ya8" path="res://Ep1/Scenes/scene_a_2.gd" id="1_27dpn"]
 [ext_resource type="AudioStream" uid="uid://cklddr5fp7uqh" path="res://Ost/86304_newgrounds_eerie_.mp3" id="2_cdqbc"]
 [ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="3_11hwv"]
+[ext_resource type="PackedScene" uid="uid://6mwtiksrfidh" path="res://MainMenu/debugging.tscn" id="5_11hwv"]
 [ext_resource type="Script" uid="uid://cgnlh8ubsqiok" path="res://Ep1/Characters/jolina_a_1.gd" id="5_27dpn"]
 [ext_resource type="PackedScene" uid="uid://b4t83ss3mw30s" path="res://Ep1/GUI/Dialogue.tscn" id="6_11hwv"]
 [ext_resource type="PackedScene" uid="uid://c1jquii7lyxcc" path="res://Ep1/Characters/JolinaA1.tscn" id="6_cdqbc"]
@@ -164,6 +165,81 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(0.65, 0.65)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6538, 431)]
+}
+
+[sub_resource type="Animation" id="Animation_he4fi"]
+resource_name = "moveLeft"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9666667),
+"transitions": PackedFloat32Array(0.48296806, 1),
+"update": 0,
+"values": [Vector2(6538, 431), Vector2(6000, 431)]
+}
+
+[sub_resource type="Animation" id="Animation_negnc"]
+resource_name = "moveLeftEnd"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6000, 431)]
+}
+
+[sub_resource type="Animation" id="Animation_otmb6"]
+resource_name = "moveRight"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9666667),
+"transitions": PackedFloat32Array(0.57434905, 1),
+"update": 0,
+"values": [Vector2(6000, 431), Vector2(7000, 431)]
+}
+
+[sub_resource type="Animation" id="Animation_ln3ve"]
+resource_name = "reset"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.6597539, 1),
+"update": 0,
+"values": [Vector2(7000, 431), Vector2(6538, 431)]
+}
 
 [sub_resource type="Animation" id="Animation_moit6"]
 resource_name = "Camera"
@@ -185,14 +261,16 @@ tracks/0/keys = {
 _data = {
 &"Idle": SubResource("Animation_1jegp"),
 &"RESET": SubResource("Animation_1an53"),
+&"moveLeft": SubResource("Animation_he4fi"),
+&"moveLeftEnd": SubResource("Animation_negnc"),
+&"moveRight": SubResource("Animation_otmb6"),
+&"reset": SubResource("Animation_ln3ve"),
 &"zoomOut": SubResource("Animation_moit6")
 }
 
 [node name="FloorOne" type="Node2D" unique_id=1612319344]
 script = ExtResource("1_27dpn")
 metadata/_edit_vertical_guides_ = [5715.0]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=421710373]
 
 [node name="201" type="Node2D" parent="." unique_id=1814370202]
 unique_name_in_owner = true
@@ -493,13 +571,19 @@ position = Vector2(6538, 431)
 offset = Vector2(0, -50)
 zoom = Vector2(0.65, 0.65)
 
+[node name="Debugging" parent="Player/Camera2D" unique_id=1282438052 instance=ExtResource("5_11hwv")]
+offset_left = -634.0
+offset_top = -407.0
+offset_right = -634.0
+offset_bottom = -407.0
+
 [node name="Dialogue" parent="Player" unique_id=704191399 instance=ExtResource("6_11hwv")]
 offset_left = 6240.0
 offset_top = 288.0
 offset_right = 6839.0
 offset_bottom = 348.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
-_Jolina_Lines = Array[String](["...", "....", ".....", "Ughhh...", "My head feels fuzzy...", "...", "....", "Hmm...", "Where-", "Am-", "I?", "...", "...."])
+_Jolina_Lines = Array[String](["...", "....", ".....", "Ughhh...", "My head feels fuzzy...", "...", "....", "Hmm...", "Where-", "Am-", "I?", "...", "....", "Hmm-", "...", "....", "This classroom doesn't looks like ours-"])
 
 [node name="Event" type="AnimationPlayer" parent="." unique_id=1718004964]
 root_node = NodePath("../CameraZoom")
@@ -507,6 +591,8 @@ libraries/ = SubResource("AnimationLibrary_11hwv")
 
 [node name="CameraZoom" type="AnimationPlayer" parent="." unique_id=1110459068]
 libraries/ = SubResource("AnimationLibrary_1jegp")
+
+[node name="Firefly" type="AnimationPlayer" parent="." unique_id=386881771]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=536029578]
 visible = false
@@ -524,6 +610,8 @@ max_distance = 4096.0
 attenuation = 0.6597538
 playback_type = 1
 parameters/looping = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=421710373]
 
 [connection signal="animation_finished" from="Event" to="." method="_on_event_animation_finished"]
 [connection signal="animation_finished" from="CameraZoom" to="." method="_on_camera_zoom_animation_finished"]
