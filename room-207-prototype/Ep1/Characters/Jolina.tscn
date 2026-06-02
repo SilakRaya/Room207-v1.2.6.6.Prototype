@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="2_fhl5q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3c18"]
-size = Vector2(126, 285)
+size = Vector2(126, 290)
 
 [node name="Jolina" type="CharacterBody2D" unique_id=810497922]
 script = ExtResource("1_w0kse")
@@ -14,5 +14,4 @@ scale = Vector2(1, 2.2578125)
 texture = ExtResource("2_fhl5q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=582082926]
-position = Vector2(0, -2.5)
 shape = SubResource("RectangleShape2D_f3c18")

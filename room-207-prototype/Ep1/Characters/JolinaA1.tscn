@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1jquii7lyxcc"]
+
+[ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="1_fbfst"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbfst"]
+size = Vector2(126, 290)
+
+[node name="JolinaA1" type="StaticBody2D" unique_id=1524370565]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=362108610]
+scale = Vector2(1, 2.2578125)
+texture = ExtResource("1_fbfst")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1797742011]
+shape = SubResource("RectangleShape2D_fbfst")
+
+[node name="Timer" type="Timer" parent="." unique_id=1793078039]
