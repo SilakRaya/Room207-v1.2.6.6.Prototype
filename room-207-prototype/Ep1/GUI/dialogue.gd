@@ -19,7 +19,6 @@ func _ready() -> void:
 
 func _process(_delta):
 	if Input.is_action_just_pressed("mobile_dialogue"):
-		print("Detected")
 		switchText()
 
 # Abstraction

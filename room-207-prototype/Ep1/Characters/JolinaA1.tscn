@@ -13,5 +13,6 @@ texture = ExtResource("1_fbfst")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1797742011]
 shape = SubResource("RectangleShape2D_fbfst")
+disabled = true
 
 [node name="Timer" type="Timer" parent="." unique_id=1793078039]

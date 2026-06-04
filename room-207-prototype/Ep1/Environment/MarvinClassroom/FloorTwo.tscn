@@ -232,7 +232,7 @@ offset_right = 300.0
 offset_bottom = 30.0
 _Jolina_Lines = Array[String](["...", "....", "Where-", "Where am I?", "...", "....", "This isn't-", "My-", "Classroom-", "...", "....", "Oh-", "I", "I had the same dream again", "....", "...", "!!!", "...", "A Firefly?", "....", "Huh!", "Hey!", "Wait Up!", "..."])
 
-[node name="Camera2D" type="Camera2D" parent="Jolina" unique_id=827490742]
+[node name="Camera2D2" type="Camera2D" parent="Jolina" unique_id=827490742]
 position = Vector2(0, -48)
 offset = Vector2(0, -200)
 zoom = Vector2(0.51, 0.51)

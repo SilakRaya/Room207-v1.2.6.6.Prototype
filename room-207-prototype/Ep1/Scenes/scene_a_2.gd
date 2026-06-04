@@ -9,6 +9,7 @@ var firefly_Idle : bool = false
 var firefly_leave : bool = false
 var move_slightly_left : bool = false
 var move_reset2 : bool = false
+var player_Reached_The_Stairs = false
 
 func _ready() -> void:
 	$CameraZoom.play("zoomOut")
@@ -18,13 +19,15 @@ func _ready() -> void:
 	$ColorRect.visible = true
 	$Dialogue.visible = false
 	%Firefly2.visible = false
+	$Player/Jolina.visible = false
+	$Player/Jolina.set_process(false)
+	
 
 func _process(_delta: float) -> void:
 	dialogue_Sequence()
 
 func dialogue_Sequence():
 	var index = %Dialogue.dialogue
-	print("Index: ", index)
 	
 	match (index):
 		14:
@@ -72,7 +75,13 @@ func dialogue_Sequence():
 				move_reset2 = true
 				$CameraZoom.play("reset2")
 				%Dialogue.set_process(false)
-			
+		30:
+			$EventObstacles.visible = false
+			%Dialogue.visible = false
+			$Player/Camera2D.enabled = false
+			$Player/JolinaA1.visible = false
+			$Player/Jolina.visible = true
+			$Player/Jolina.set_process(true)
 
 func _on_camera_zoom_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "zoomOut":
@@ -113,3 +122,15 @@ func _on_event_animation_finished(anim_name: StringName) -> void:
 	
 	if anim_name == "firefly_Leave":
 		$Dialogue.set_process(true)
+
+
+func _on_area_2d_body_entered(_body: CharacterBody2D) -> void:
+	#this should only happen once
+	if not player_Reached_The_Stairs:
+		player_Reached_The_Stairs = true
+		print("Play animation firefly going upstairs!")
+	print("Player Enters show prompt")
+
+
+func _on_area_2d_body_exited(_body: CharacterBody2D) -> void:
+	print("Player Leaves hide prompt")

@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="3_11hwv"]
 [ext_resource type="PackedScene" uid="uid://6mwtiksrfidh" path="res://MainMenu/debugging.tscn" id="5_11hwv"]
 [ext_resource type="Script" uid="uid://cgnlh8ubsqiok" path="res://Ep1/Characters/jolina_a_1.gd" id="5_27dpn"]
+[ext_resource type="PackedScene" uid="uid://dt2xykj4k2h6m" path="res://Ep1/Characters/Jolina.tscn" id="6_1an53"]
 [ext_resource type="PackedScene" uid="uid://b4t83ss3mw30s" path="res://Ep1/GUI/Dialogue.tscn" id="6_11hwv"]
 [ext_resource type="PackedScene" uid="uid://c1jquii7lyxcc" path="res://Ep1/Characters/JolinaA1.tscn" id="6_cdqbc"]
 
@@ -19,6 +20,9 @@ size = Vector2(127, 130)
 
 [sub_resource type="LabelSettings" id="LabelSettings_cdqbc"]
 font_size = 33
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1an53"]
+radius = 1049.1449
 
 [sub_resource type="Animation" id="Animation_27dpn"]
 resource_name = "FadeIn"
@@ -685,6 +689,7 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EventObstacles" unique_id=2122111596]
 position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_27dpn")
+disabled = true
 debug_color = Color(0.841581, 0.32422376, 0.5307359, 0.41960785)
 
 [node name="dev-ken" type="Label" parent="." unique_id=2108762613]
@@ -749,6 +754,9 @@ offset_top = -407.0
 offset_right = -634.0
 offset_bottom = -407.0
 
+[node name="Jolina" parent="Player" unique_id=810497922 instance=ExtResource("6_1an53")]
+position = Vector2(6538, 511)
+
 [node name="Dialogue" parent="." unique_id=704191399 instance=ExtResource("6_11hwv")]
 unique_name_in_owner = true
 clip_contents = true
@@ -774,6 +782,16 @@ offset_top = -56.0
 offset_right = 28.0
 offset_bottom = -33.0
 text = "FIREFLY"
+
+[node name="StairsNode" type="Node2D" parent="." unique_id=2062412809]
+position = Vector2(294, 391)
+metadata/_edit_group_ = true
+
+[node name="Area2D" type="Area2D" parent="StairsNode" unique_id=1390843286]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StairsNode/Area2D" unique_id=784379730]
+shape = SubResource("CircleShape2D_1an53")
+debug_color = Color(0.6931277, 0.48007256, 0.35726634, 0.41960785)
 
 [node name="Event" type="AnimationPlayer" parent="." unique_id=1718004964]
 root_node = NodePath("../CameraZoom")
@@ -803,5 +821,7 @@ parameters/looping = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=421710373]
 
+[connection signal="body_entered" from="StairsNode/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="StairsNode/Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="animation_finished" from="Event" to="." method="_on_event_animation_finished"]
 [connection signal="animation_finished" from="CameraZoom" to="." method="_on_camera_zoom_animation_finished"]
