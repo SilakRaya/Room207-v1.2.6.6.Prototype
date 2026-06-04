@@ -124,7 +124,7 @@ func _on_event_animation_finished(anim_name: StringName) -> void:
 		$Dialogue.set_process(true)
 
 
-func _on_area_2d_body_entered(_body: CharacterBody2D) -> void:
+func _on_area_2d_body_entered(_body: Node2D) -> void:
 	#this should only happen once
 	if not player_Reached_The_Stairs:
 		player_Reached_The_Stairs = true
@@ -132,5 +132,5 @@ func _on_area_2d_body_entered(_body: CharacterBody2D) -> void:
 	print("Player Enters show prompt")
 
 
-func _on_area_2d_body_exited(_body: CharacterBody2D) -> void:
+func _on_area_2d_body_exited(_body: Node2D) -> void:
 	print("Player Leaves hide prompt")
