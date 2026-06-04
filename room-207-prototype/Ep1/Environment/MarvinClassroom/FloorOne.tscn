@@ -196,13 +196,30 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_gbkp7"]
+resource_name = "firefly_Leave"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%Firefly2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.0333333, 2.03, 2.9666667),
+"transitions": PackedFloat32Array(1.5157168, 1.2745607, 1, 1),
+"update": 0,
+"values": [Vector2(6384, 472), Vector2(6073, 350), Vector2(5457, 487), Vector2(5225, 495)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_11hwv"]
 _data = {
 &"FadeIn": SubResource("Animation_27dpn"),
 &"FireFly_Go_Jolina": SubResource("Animation_vi5rp"),
 &"Firefly_Idle": SubResource("Animation_l2woa"),
 &"RESET": SubResource("Animation_cdqbc"),
-&"dialogueFadeIn": SubResource("Animation_11hwv")
+&"dialogueFadeIn": SubResource("Animation_11hwv"),
+&"firefly_Leave": SubResource("Animation_gbkp7")
 }
 
 [sub_resource type="Animation" id="Animation_1jegp"]
@@ -296,6 +313,34 @@ tracks/0/keys = {
 "values": [Vector2(6000, 431), Vector2(7000, 431)]
 }
 
+[sub_resource type="Animation" id="Animation_y8tff"]
+resource_name = "move_slightly_left"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.21763767, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(0.9, 0.9)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.21763763, 1),
+"update": 0,
+"values": [Vector2(6538, 431), Vector2(6400, 430.435)]
+}
+
 [sub_resource type="Animation" id="Animation_ln3ve"]
 resource_name = "reset"
 length = 2.0
@@ -310,6 +355,34 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(0.6597539, 1),
 "update": 0,
 "values": [Vector2(7000, 431), Vector2(6538, 431)]
+}
+
+[sub_resource type="Animation" id="Animation_m0nn4"]
+resource_name = "reset2"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(0.21022414, 1),
+"update": 0,
+"values": [Vector2(0.9, 0.9), Vector2(0.7, 0.7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 3),
+"transitions": PackedFloat32Array(0.43527558, 1),
+"update": 0,
+"values": [Vector2(6400, 430.435), Vector2(6548, 430.435)]
 }
 
 [sub_resource type="Animation" id="Animation_moit6"]
@@ -350,7 +423,9 @@ _data = {
 &"moveLeft": SubResource("Animation_he4fi"),
 &"moveLeftEnd": SubResource("Animation_negnc"),
 &"moveRight": SubResource("Animation_otmb6"),
+&"move_slightly_left": SubResource("Animation_y8tff"),
 &"reset": SubResource("Animation_ln3ve"),
+&"reset2": SubResource("Animation_m0nn4"),
 &"zoomOut": SubResource("Animation_moit6"),
 &"zoom_In_Jolina": SubResource("Animation_vlwf5")
 }
@@ -676,12 +751,13 @@ offset_bottom = -407.0
 
 [node name="Dialogue" parent="." unique_id=704191399 instance=ExtResource("6_11hwv")]
 unique_name_in_owner = true
+clip_contents = true
 offset_left = 6240.0
 offset_top = 288.0
 offset_right = 6839.0
 offset_bottom = 348.0
 pivot_offset_ratio = Vector2(0.5, 0.5)
-_Jolina_Lines = Array[String](["...", "....", ".....", "Ughhh...", "My head feels fuzzy...", "...", "....", "Hmm...", "Where-", "Am-", "I?", "...", "....", "Hmm-", "...", "....", "This hallway doesn't looks like ours-", "...", "....", "Oh!", "I must be dreaming!", "...", "....", "huh?"])
+_Jolina_Lines = Array[String](["...", "....", ".....", "Ughhh...", "My head feels fuzzy...", "...", "....", "Hmm...", "Where-", "Am-", "I?", "...", "....", "Hmm-", "...", "....", "This hallway doesn't looks like ours-", "...", "....", "Oh!", "I must be dreaming!", "...", "....", "huh?", "A Firefly?", "...", "HUH!", "HEY!", "WAIT UP!", "I need to follow that Firefly!", "..."])
 
 [node name="Firefly2" type="Node2D" parent="." unique_id=1439478754]
 unique_name_in_owner = true
