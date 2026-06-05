@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cjtt2oosf50k4"]
 
+[ext_resource type="Script" uid="uid://yh11ku74u0xt" path="res://Ep1/Environment/MarvinClassroom/floor_one.gd" id="1_otmb6"]
 [ext_resource type="AudioStream" uid="uid://cklddr5fp7uqh" path="res://Ost/86304_newgrounds_eerie_.mp3" id="2_cdqbc"]
 [ext_resource type="Script" uid="uid://ea61sjshx1fs" path="res://Ep1/Scenes/dialogue_event.gd" id="2_moit6"]
 [ext_resource type="Script" uid="uid://0o0r4ybyg4uc" path="res://Ep1/Scenes/camera_event.gd" id="3_1jegp"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dt2xykj4k2h6m" path="res://Ep1/Characters/Jolina.tscn" id="6_1an53"]
 [ext_resource type="PackedScene" uid="uid://b4t83ss3mw30s" path="res://Ep1/GUI/Dialogue.tscn" id="6_11hwv"]
 [ext_resource type="PackedScene" uid="uid://c1jquii7lyxcc" path="res://Ep1/Characters/JolinaA1.tscn" id="6_cdqbc"]
+[ext_resource type="PackedScene" uid="uid://bldaeyhmw4g4c" path="res://Ep1/GUI/MobileGUI.tscn" id="8_he4fi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lhwjw"]
 size = Vector2(127, 128)
@@ -428,6 +430,7 @@ _data = {
 }
 
 [node name="FloorOne" type="Node2D" unique_id=1612319344]
+script = ExtResource("1_otmb6")
 metadata/_edit_vertical_guides_ = [5715.0]
 
 [node name="DialogueEvent" type="Node" parent="." unique_id=1058789679]
@@ -542,6 +545,7 @@ offset_bottom = -407.0
 
 [node name="Jolina" parent="Player" unique_id=810497922 instance=ExtResource("6_1an53")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(6538, 511)
 
 [node name="Dialogue" parent="." unique_id=704191399 instance=ExtResource("6_11hwv")]
@@ -600,8 +604,6 @@ attenuation = 0.6597538
 playback_type = 1
 parameters/looping = false
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=421710373]
-
 [node name="devNote" type="Label" parent="." unique_id=688200195]
 offset_left = 5640.0
 offset_top = 1008.0
@@ -626,6 +628,8 @@ offset_bottom = 1101.0
 theme_override_font_sizes/font_size = 47
 text = "- This is a placeholder for the stacks chairs, it's to prevent the player
 going to the right side!"
+
+[node name="MobileControls" parent="." unique_id=1770030609 instance=ExtResource("8_he4fi")]
 
 [connection signal="animation_finished" from="Event" to="DialogueEvent" method="_on_event_animation_finished"]
 [connection signal="animation_finished" from="CameraZoom" to="CameraEvent" method="_on_camera_zoom_animation_finished"]

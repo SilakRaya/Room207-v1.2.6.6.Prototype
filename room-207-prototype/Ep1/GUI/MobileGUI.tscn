@@ -1,105 +1,53 @@
 [gd_scene format=3 uid="uid://bldaeyhmw4g4c"]
 
-[ext_resource type="Texture2D" uid="uid://cqlya3pwemonw" path="res://icon.svg" id="1_4gala"]
-[ext_resource type="Script" uid="uid://ddqpjauuwfref" path="res://Ep1/GUI/mobile_gui.gd" id="1_uwoms"]
+[ext_resource type="Script" uid="uid://clpefo6vdbx1j" path="res://Ep1/GUI/control.gd" id="1_4gala"]
+[ext_resource type="Texture2D" uid="uid://cvcg81jk8fmw7" path="res://MainMenu/TalkButton.png" id="2_uwoms"]
+[ext_resource type="Texture2D" uid="uid://ist0u0ll5gy4" path="res://MainMenu/LeftButton.png" id="3_d520j"]
+[ext_resource type="Texture2D" uid="uid://c5silnwi38w2f" path="res://MainMenu/RightButton.png" id="4_xl5cr"]
 
-[node name="MobileGui" type="Control" unique_id=465481812]
-modulate = Color(1, 1, 1, 0.3882353)
+[node name="MobileControls" type="CanvasLayer" unique_id=1770030609]
+
+[node name="Control" type="Control" parent="." unique_id=1233863357]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_uwoms")
-metadata/_edit_use_anchors_ = true
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+script = ExtResource("1_4gala")
 
-[node name="Movement" type="MarginContainer" parent="." unique_id=680615818]
+[node name="TalkButton" type="Button" parent="Control" unique_id=1889706478]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -186.0
-offset_right = 334.0
-grow_vertical = 0
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_bottom = 50
-
-[node name="HSplitContainer" type="HSplitContainer" parent="Movement" unique_id=106487835]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="Left_Movement" type="Button" parent="Movement/HSplitContainer" unique_id=1706527737]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/icon_normal_color = Color(0.4664079, 0.17251751, 0.20841059, 1)
-text = "Left"
-icon = ExtResource("1_4gala")
-icon_alignment = 1
-
-[node name="Right_Movement" type="Button" parent="Movement/HSplitContainer" unique_id=103817684]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/icon_normal_color = Color(0.4664079, 0.17251751, 0.20841059, 1)
-text = "Right"
-icon = ExtResource("1_4gala")
-icon_alignment = 1
-
-[node name="Dialogue" type="MarginContainer" parent="." unique_id=1142431709]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.7390625
-anchor_top = 0.7416667
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
-metadata/_edit_use_anchors_ = true
-
-[node name="HSplitContainer" type="HSplitContainer" parent="Dialogue" unique_id=2038216346]
-layout_mode = 2
-
-[node name="Skip" type="Button" parent="Dialogue/HSplitContainer" unique_id=712070386]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/icon_normal_color = Color(0.4664079, 0.17251751, 0.20841059, 1)
-text = "Skip"
-icon = ExtResource("1_4gala")
-icon_alignment = 1
-
-[node name="Continue" type="Button" parent="Dialogue/HSplitContainer" unique_id=71313996]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/icon_normal_color = Color(0.4664079, 0.17251751, 0.20841059, 1)
-text = "Continue"
-icon = ExtResource("1_4gala")
-icon_alignment = 1
-
-[node name="Pause" type="MarginContainer" parent="." unique_id=1726356684]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.07265625
-anchor_bottom = 0.12916666
-offset_right = 43.0
-offset_bottom = 43.0
+layout_mode = 0
+offset_left = 1076.0
+offset_top = 522.0
+offset_right = 1212.0
+offset_bottom = 658.0
 scale = Vector2(0.5, 0.5)
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-metadata/_edit_use_anchors_ = true
+icon = ExtResource("2_uwoms")
+flat = true
 
-[node name="_Pause" type="Button" parent="Pause" unique_id=1828215077]
+[node name="LeftButton" type="Button" parent="Control" unique_id=2120273607]
 unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/icon_normal_color = Color(0.4664079, 0.17251751, 0.20841059, 1)
-text = "Skip"
-icon = ExtResource("1_4gala")
-icon_alignment = 1
+layout_mode = 0
+offset_left = 65.0
+offset_top = 510.0
+offset_right = 351.0
+offset_bottom = 796.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("3_d520j")
+flat = true
 
-[connection signal="pressed" from="Movement/HSplitContainer/Left_Movement" to="." method="_on_left_movement_pressed"]
-[connection signal="pressed" from="Movement/HSplitContainer/Right_Movement" to="." method="_on_right_movement_pressed"]
-[connection signal="pressed" from="Dialogue/HSplitContainer/Continue" to="." method="_on_continue_pressed"]
+[node name="RightButton" type="Button" parent="Control" unique_id=364743051]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 263.0
+offset_top = 512.0
+offset_right = 549.0
+offset_bottom = 798.0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("4_xl5cr")
+flat = true
+
+[connection signal="pressed" from="Control/TalkButton" to="Control" method="_on_talk_button_pressed"]
+[connection signal="pressed" from="Control/TalkButton" to="Control" method="_on_continue_button_pressed"]
+[connection signal="pressed" from="Control/LeftButton" to="Control" method="_on_left_button_pressed"]
+[connection signal="pressed" from="Control/RightButton" to="Control" method="_on_right_button_pressed"]
